@@ -7,7 +7,7 @@ def rename_files(original_text, new_text):
     current_dir = os.getcwd()
     
     # Create a new subfolder named "Rename" if it doesn't exist
-    new_folder_path = os.path.join(current_dir, "Rename")
+    new_folder_path = os.path.join(current_dir, "Renamed")
     os.makedirs(new_folder_path, exist_ok=True)
     
     # Get a list of files in the current directory
@@ -40,12 +40,12 @@ def rename_files(original_text, new_text):
     for filename in files_to_rename:
         # Generate the new filename
         new_filename = filename.replace(original_text, new_text)
-        # Create the path for the new file in the "Rename" subfolder
+        # Create the path for the new file in the "Renamed" subfolder
         new_filepath = os.path.join(new_folder_path, new_filename)
         # Copy the original file to the new subfolder with the new name
         shutil.copy2(os.path.join(current_dir, filename), new_filepath)
     
-    print("File names have been changed and copied to the 'Rename' subfolder.")
+    print("File names have been changed and copied to the 'Renamed' subfolder.")
 
 # Check if the --help flag is specified or if there are not enough arguments
 if "--help" in sys.argv or len(sys.argv) < 2:
