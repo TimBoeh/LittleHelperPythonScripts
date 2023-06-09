@@ -8,6 +8,7 @@ The easiest way, in my opionen, is to simpley specify an `alias` in you bashrc, 
 ```
 alias rename_files='python3 /home/user/YOUR/PATH/LittleHelperPythonScripts/rename_files/rename_files.py'
 ```
+Afterwards run `source ~/.bachrc` and you can use the tools everywhere you want.
 
 #### **--* Use these scripts at your own risk. *--**
 
@@ -24,6 +25,5 @@ Please be aware, the original file is not touched. Instead a copy of the origina
 
 <img src="https://github.com/TimBoeh/LittleHelperPythonScripts/blob/main/figs/rename_files_screenshot.png" width="600">
 
-Afterwards run `source ~/.bachrc` and you can use the tool everywhere you need to.
 ## 2. Rename sample names *only* in fasta files
 This little tool does one thing: it checks the sample names in all `.fasta` files in the current directory for the first space, and removes everything after that as well as the space itself. The modified files are stored in a newly created subfolder called **cleanedSampNames`**. Always double check the output to make sure the data itself is not corrupted.
