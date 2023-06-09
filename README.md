@@ -17,8 +17,9 @@ Arguments:
 ```
 Please be aware, the original file is not touched. Instead a copy of the original file with the modified file name is stored in a newly generated subfolder called **Renamed**.
 
-<img src="https://raw.githubusercontent.com/TimBoeh/LittleHelperPythonScripts/figs/rename_files_screenshot.png"/>
+![ezcv log  o](https://raw.githubusercontent.com/Descent/ezcv/master/.github/logo.png)
 
+![screen shot](https://raw.githubusercontent.com/TimBoeh/LittleHelperPythonScripts/master/figs/rename_files_screenshot.png")
 
 The simplest way, in my opionen, is to simpley specify an `alias` in you bashrc, like the following:
 ```
