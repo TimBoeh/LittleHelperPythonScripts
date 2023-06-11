@@ -27,5 +27,5 @@ Please be aware, the original file is not touched. Instead a copy of the origina
 
 ## 2. Rename sample names *only* in fasta files
 This little tool does one thing: it checks the sample names in all `.fasta` files in the current directory for the first space, and removes everything after that as well as the space itself. The modified files are stored in a newly created subfolder called **cleanedSampNames`**. Always double check the output to make sure the data itself is not corrupted.
-## 3. Fasta into Phylip
+## 3. Fasta to Phylip
 In times of IQtree and other modern tree inference tools that can read alignments in fasta format, this tool is probably obsolete ... but what this little tool does is to translate a fasta alignment into the phylip format needed for e.g. RAxML. Just run the tool in a directory with one or more fasta files you need to translate to phylip and it will create a new file with `.phy` as extension. To use the tool you need to have Biopython installed. This can be done with **pip** (`pip install biopython`) or **conda** (`conda install biopython`).
