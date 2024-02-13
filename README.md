@@ -4,6 +4,12 @@ Here live some small custom Python scripts I wrote to solve everyday problems wo
 #### **Simply git clone the directory:**
 `git clone https://github.com/TimBoeh/LittleHelperPythonScripts.git`
 
+The easiest way, in my opionen, is to simpley specify an `alias` in you bashrc, like the following example:
+```
+alias rename_files='python3 /home/user/YOUR/PATH/LittleHelperPythonScripts/rename_files/rename_files.py'
+```
+Afterwards run `source ~/.bachrc` and you can use the tools everywhere you want.
+
 #### **--* Use these scripts at your own risk. *--**
 
 ## 1. Rename files names
@@ -17,13 +23,9 @@ Arguments:
 ```
 Please be aware, the original file is not touched. Instead a copy of the original file with the modified file name is stored in a newly generated subfolder called **Renamed**.
 
-<img src="https://raw.githubusercontent.com/TimBoeh/LittleHelperPythonScripts/figs/rename_files_screenshot.png"/>
+<img src="https://github.com/TimBoeh/LittleHelperPythonScripts/blob/main/figs/rename_files_screenshot.png" width="600">
 
-
-The simplest way, in my opionen, is to simpley specify an `alias` in you bashrc, like the following:
-```
-alias rename_files='python3 /home/user/YOUR/PATH/LittleHelperPythonScripts/rename_files/rename_files.py'
-```
-Afterwards run `source ~/.bachrc` and you can use the tool everywhere you need to.
 ## 2. Rename sample names *only* in fasta files
 This little tool does one thing: it checks the sample names in all `.fasta` files in the current directory for the first space, and removes everything after that as well as the space itself. The modified files are stored in a newly created subfolder called **cleanedSampNames`**. Always double check the output to make sure the data itself is not corrupted.
+## 3. Fasta to Phylip
+In times of IQtree and other modern tree inference tools that can read alignments in fasta format, this tool is probably obsolete ... but what this little tool does is to translate a fasta alignment into the phylip format needed for e.g. RAxML. Just run the tool in a directory with one or more fasta files you need to translate to phylip and it will create a new file with `.phy` as extension. To use the tool you need to have Biopython installed. This can be done with **pip** (`pip install biopython`) or **conda** (`conda install biopython`).
